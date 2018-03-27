@@ -42,7 +42,7 @@ class TicTacToe
   def valid_move?
     @index.between?(0,8) && !position_taken?
   end
-  
+
   def turn_count
     @board.count {|symbol| symbol == "X" || symbol == "O"}
   end
