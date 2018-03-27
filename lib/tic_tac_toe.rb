@@ -15,6 +15,14 @@ class TicTacToe
     @board = Array.new(9, " ")
   end
 
+  # def board=(board)
+  #   @board = board
+  # end
+  #
+  # def board
+  #   @board
+  # end
+
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
@@ -26,17 +34,13 @@ class TicTacToe
   def input_to_index(input)
     index = input.to_i - 1
   end
-  
-  def input_to_index=(index)
-    @index = index
-  end
 
   def move(index, value)
-    @board[@index] = value
+    @board[index] = value
   end
 
   def position_taken?(index)
-    @board[@index] == "X" || @board[@index] == "O"
+    @board[index] == "X" || @board[index] == "O"
   end
 
   def valid_move?(index)
